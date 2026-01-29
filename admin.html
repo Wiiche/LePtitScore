@@ -1,0 +1,506 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin - Le Ptit Score</title>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Outfit', sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .admin-container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .header {
+            background: white;
+            padding: 30px;
+            border-radius: 20px;
+            margin-bottom: 30px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+        }
+
+        .header h1 {
+            color: #4a90e2;
+            font-size: 2rem;
+            margin-bottom: 10px;
+        }
+
+        .header p {
+            color: #666;
+        }
+
+        .main-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+        }
+
+        .panel {
+            background: white;
+            padding: 30px;
+            border-radius: 20px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+        }
+
+        .panel h2 {
+            color: #2c3e50;
+            font-size: 1.5rem;
+            margin-bottom: 20px;
+            padding-bottom: 15px;
+            border-bottom: 2px solid #e8ecf1;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            color: #2c3e50;
+            font-weight: 600;
+            margin-bottom: 8px;
+            font-size: 0.9rem;
+        }
+
+        .form-group input,
+        .form-group textarea,
+        .form-group select {
+            width: 100%;
+            padding: 12px;
+            border: 2px solid #e8ecf1;
+            border-radius: 10px;
+            font-family: 'Outfit', sans-serif;
+            font-size: 0.95rem;
+            transition: all 0.3s ease;
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus,
+        .form-group select:focus {
+            outline: none;
+            border-color: #4a90e2;
+            box-shadow: 0 0 0 3px rgba(74, 144, 226, 0.1);
+        }
+
+        .form-group textarea {
+            min-height: 100px;
+            resize: vertical;
+        }
+
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+        }
+
+        .checkbox-group {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .checkbox-group input[type="checkbox"] {
+            width: auto;
+            cursor: pointer;
+        }
+
+        .btn {
+            padding: 12px 24px;
+            border: none;
+            border-radius: 10px;
+            font-family: 'Outfit', sans-serif;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, #4a90e2, #5b9cf5);
+            color: white;
+            width: 100%;
+            margin-top: 10px;
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(74, 144, 226, 0.3);
+        }
+
+        .btn-secondary {
+            background: #e8ecf1;
+            color: #2c3e50;
+        }
+
+        .btn-secondary:hover {
+            background: #d0d7de;
+        }
+
+        .btn-danger {
+            background: #ff6b6b;
+            color: white;
+        }
+
+        .btn-danger:hover {
+            background: #ff5252;
+        }
+
+        .btn-small {
+            padding: 6px 12px;
+            font-size: 0.85rem;
+        }
+
+        .content-builder {
+            margin-top: 20px;
+        }
+
+        .content-block {
+            background: #f5f7fa;
+            padding: 15px;
+            border-radius: 10px;
+            margin-bottom: 15px;
+            border-left: 4px solid #4a90e2;
+        }
+
+        .content-block-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+
+        .content-block-type {
+            font-weight: 600;
+            color: #4a90e2;
+            font-size: 0.9rem;
+        }
+
+        .content-block-actions {
+            display: flex;
+            gap: 5px;
+        }
+
+        .add-block-buttons {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+            margin-top: 15px;
+        }
+
+        .articles-list {
+            max-height: 600px;
+            overflow-y: auto;
+        }
+
+        .article-item {
+            background: #f5f7fa;
+            padding: 15px;
+            border-radius: 10px;
+            margin-bottom: 10px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: all 0.3s ease;
+        }
+
+        .article-item:hover {
+            background: #e8ecf1;
+            transform: translateX(5px);
+        }
+
+        .article-info {
+            flex: 1;
+        }
+
+        .article-title {
+            font-weight: 600;
+            color: #2c3e50;
+            margin-bottom: 5px;
+        }
+
+        .article-meta {
+            font-size: 0.85rem;
+            color: #666;
+        }
+
+        .article-actions {
+            display: flex;
+            gap: 10px;
+        }
+
+        .badge {
+            display: inline-block;
+            padding: 4px 10px;
+            border-radius: 20px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            margin-left: 10px;
+        }
+
+        .badge-featured {
+            background: #4a90e2;
+            color: white;
+        }
+
+        .gradient-selector {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 10px;
+            margin-top: 10px;
+        }
+
+        .gradient-option {
+            height: 60px;
+            border-radius: 10px;
+            cursor: pointer;
+            border: 3px solid transparent;
+            transition: all 0.3s ease;
+        }
+
+        .gradient-option:hover {
+            transform: scale(1.05);
+        }
+
+        .gradient-option.selected {
+            border-color: #2c3e50;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .icon-selector {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+            margin-top: 10px;
+        }
+
+        .icon-option {
+            font-size: 2rem;
+            padding: 10px;
+            cursor: pointer;
+            border: 2px solid transparent;
+            border-radius: 10px;
+            transition: all 0.3s ease;
+        }
+
+        .icon-option:hover {
+            background: #f5f7fa;
+        }
+
+        .icon-option.selected {
+            border-color: #4a90e2;
+            background: #e8f2ff;
+        }
+
+        .export-section {
+            background: #fff3cd;
+            padding: 20px;
+            border-radius: 10px;
+            margin-top: 20px;
+            border-left: 4px solid #ffc107;
+        }
+
+        .export-section h3 {
+            color: #856404;
+            margin-bottom: 10px;
+        }
+
+        .export-section p {
+            color: #856404;
+            font-size: 0.9rem;
+            margin-bottom: 15px;
+        }
+
+        .json-preview {
+            background: #2c3e50;
+            color: #fff;
+            padding: 15px;
+            border-radius: 10px;
+            font-family: 'Courier New', monospace;
+            font-size: 0.85rem;
+            max-height: 300px;
+            overflow-y: auto;
+            white-space: pre-wrap;
+            word-wrap: break-word;
+        }
+
+        .alert {
+            padding: 15px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            display: none;
+        }
+
+        .alert.show {
+            display: block;
+        }
+
+        .alert-success {
+            background: #d4edda;
+            color: #155724;
+            border-left: 4px solid #28a745;
+        }
+
+        .alert-info {
+            background: #d1ecf1;
+            color: #0c5460;
+            border-left: 4px solid #17a2b8;
+        }
+
+        @media (max-width: 768px) {
+            .main-content {
+                grid-template-columns: 1fr;
+            }
+
+            .form-row {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="admin-container">
+        <div class="header">
+            <h1>🎲 Administration - Le Ptit Score</h1>
+            <p>Gérez facilement vos articles d'actualités</p>
+        </div>
+
+        <div class="alert alert-success" id="successAlert">
+            ✅ Article créé avec succès !
+        </div>
+
+        <div class="main-content">
+            <!-- Formulaire de création d'article -->
+            <div class="panel">
+                <h2>✍️ Créer un article</h2>
+                
+                <form id="articleForm">
+                    <div class="form-group">
+                        <label for="articleTitle">Titre de l'article *</label>
+                        <input type="text" id="articleTitle" required placeholder="Ex: Wingspan arrive en français !">
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="articleId">ID (auto-généré)</label>
+                            <input type="text" id="articleId" readonly placeholder="Généré automatiquement">
+                        </div>
+                        <div class="form-group">
+                            <label for="articleCategory">Catégorie *</label>
+                            <select id="articleCategory" required>
+                                <option value="Actualités">Actualités</option>
+                                <option value="Sorties">Sorties</option>
+                                <option value="Événements">Événements</option>
+                                <option value="Critiques">Critiques</option>
+                                <option value="Tutoriels">Tutoriels</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="articleExcerpt">Résumé court *</label>
+                        <textarea id="articleExcerpt" required placeholder="Un résumé de 150 caractères maximum..." maxlength="150"></textarea>
+                        <small style="color: #666;">Caractères restants: <span id="excerptCount">150</span></small>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="articleDate">Date *</label>
+                            <input type="date" id="articleDate" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="articleReadTime">Temps de lecture</label>
+                            <input type="text" id="articleReadTime" value="3 min de lecture" placeholder="3 min de lecture">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Icône de l'article *</label>
+                        <div class="icon-selector">
+                            <div class="icon-option selected" data-icon="🎲">🎲</div>
+                            <div class="icon-option" data-icon="🎮">🎮</div>
+                            <div class="icon-option" data-icon="🏆">🏆</div>
+                            <div class="icon-option" data-icon="🎪">🎪</div>
+                            <div class="icon-option" data-icon="🎯">🎯</div>
+                            <div class="icon-option" data-icon="🦜">🦜</div>
+                            <div class="icon-option" data-icon="🚂">🚂</div>
+                            <div class="icon-option" data-icon="🏝️">🏝️</div>
+                            <div class="icon-option" data-icon="📰">📰</div>
+                            <div class="icon-option" data-icon="⭐">⭐</div>
+                        </div>
+                        <input type="hidden" id="articleIcon" value="🎲">
+                    </div>
+
+                    <div class="form-group">
+                        <label>Dégradé de couleur *</label>
+                        <div class="gradient-selector">
+                            <div class="gradient-option selected" data-gradient="linear-gradient(135deg, #667eea 0%, #764ba2 100%)" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);"></div>
+                            <div class="gradient-option" data-gradient="linear-gradient(135deg, #f093fb 0%, #f5576c 100%)" style="background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);"></div>
+                            <div class="gradient-option" data-gradient="linear-gradient(135deg, #4facfe 0%, #00f2fe 100%)" style="background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);"></div>
+                            <div class="gradient-option" data-gradient="linear-gradient(135deg, #fa709a 0%, #fee140 100%)" style="background: linear-gradient(135deg, #fa709a 0%, #fee140 100%);"></div>
+                            <div class="gradient-option" data-gradient="linear-gradient(135deg, #30cfd0 0%, #330867 100%)" style="background: linear-gradient(135deg, #30cfd0 0%, #330867 100%);"></div>
+                            <div class="gradient-option" data-gradient="linear-gradient(135deg, #a8edea 0%, #fed6e3 100%)" style="background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%);"></div>
+                        </div>
+                        <input type="hidden" id="articleGradient" value="linear-gradient(135deg, #667eea 0%, #764ba2 100%)">
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="articleBadge">Badge (optionnel)</label>
+                            <input type="text" id="articleBadge" placeholder="Ex: 🔥 Nouveauté">
+                        </div>
+                        <div class="form-group checkbox-group">
+                            <input type="checkbox" id="articleFeatured">
+                            <label for="articleFeatured">Article en vedette</label>
+                        </div>
+                    </div>
+
+                    <div class="content-builder">
+                        <label><strong>Contenu de l'article *</strong></label>
+                        <div id="contentBlocks"></div>
+                        
+                        <div class="add-block-buttons">
+                            <button type="button" class="btn btn-secondary btn-small" onclick="addBlock('paragraph')">+ Paragraphe</button>
+                            <button type="button" class="btn btn-secondary btn-small" onclick="addBlock('heading')">+ Titre</button>
+                            <button type="button" class="btn btn-secondary btn-small" onclick="addBlock('list')">+ Liste</button>
+                        </div>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary">✨ Créer l'article</button>
+                </form>
+
+                <div class="export-section">
+                    <h3>📥 Exporter les articles</h3>
+                    <p>Une fois vos articles créés, téléchargez le fichier JSON et remplacez <code>articles.json</code> sur votre serveur.</p>
+                    <button class="btn btn-secondary" onclick="downloadJSON()">📥 Télécharger articles.json</button>
+                </div>
+            </div>
+
+            <!-- Liste des articles -->
+            <div class="panel">
+                <h2>📚 Articles existants</h2>
+                <div class="alert alert-info show">
+                    ℹ️ Les articles sont stockés temporairement dans votre navigateur. N'oubliez pas de télécharger le JSON !
+                </div>
+                <div class="articles-list" id="articlesList">
+                    <p style="color: #666; text-align: center; padding: 40px;">Aucun article pour le moment. Créez-en un !</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="admin.js"></script>
+</body>
+</html>
