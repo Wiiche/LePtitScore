@@ -1,0 +1,253 @@
+{
+  "articles": [
+    {
+      "id": "dune-imperium",
+      "title": "Dune: Imperium arrive enfin en français !",
+      "icon": "🎲",
+      "badge": "🔥 Nouveauté",
+      "category": "Sorties",
+      "date": "2026-01-24",
+      "readTime": "4 min de lecture",
+      "excerpt": "La version française du hit de deck-building sera disponible dès février 2026. Pré-commandes ouvertes.",
+      "gradient": "linear-gradient(135deg, #667eea 0%, #764ba2 100%)",
+      "featured": true,
+      "author": "Rédaction Le Ptit Score",
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "Après des mois d'attente, les joueurs français vont enfin pouvoir découvrir <strong>Dune: Imperium</strong>, l'un des jeux les plus acclamés de ces dernières années. L'éditeur français Intrafin Games a officiellement annoncé la sortie de la version française pour février 2026."
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "Un jeu révolutionnaire"
+        },
+        {
+          "type": "paragraph",
+          "text": "Dune: Imperium combine brillamment le deck-building et le placement d'ouvriers dans l'univers riche de Frank Herbert. Les joueurs incarnent des leaders de grandes maisons qui cherchent à dominer le désert d'Arrakis et à contrôler l'épice, la substance la plus précieuse de l'univers."
+        },
+        {
+          "type": "paragraph",
+          "text": "Le jeu a remporté de nombreux prix depuis sa sortie en anglais en 2020, notamment :"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Meeples Choice Award 2021",
+            "Golden Geek Award du meilleur jeu de plateau 2020",
+            "Nominé au Kennerspiel des Jahres 2021"
+          ]
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "Contenu de la boîte"
+        },
+        {
+          "type": "paragraph",
+          "text": "La version française comprendra tous les éléments du jeu de base avec des traductions de haute qualité :"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Plus de 150 cartes entièrement illustrées",
+            "Un plateau de jeu représentant Arrakis",
+            "Des figurines représentant les différentes factions",
+            "Des ressources et jetons premium",
+            "Un livret de règles détaillé en français"
+          ]
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "Pré-commandes et disponibilité"
+        },
+        {
+          "type": "paragraph",
+          "text": "Les pré-commandes sont d'ores et déjà ouvertes chez la plupart des revendeurs spécialisés. Le prix public conseillé est de 59,90€. Les premiers exemplaires seront livrés début février 2026."
+        },
+        {
+          "type": "paragraph",
+          "text": "Pour les fans de la franchise, l'extension <strong>Rise of Ix</strong> sera également traduite et disponible au printemps 2026. De quoi prolonger l'expérience de jeu pour de nombreuses parties !"
+        }
+      ]
+    },
+    {
+      "id": "as-dor-2026",
+      "title": "Les As d'Or 2026 : Les nominations",
+      "icon": "🏆",
+      "badge": null,
+      "category": "Événements",
+      "date": "2026-01-21",
+      "readTime": "3 min de lecture",
+      "excerpt": "Découvrez la liste des jeux nominés pour le prix du meilleur jeu de l'année.",
+      "gradient": "linear-gradient(135deg, #f093fb 0%, #f5576c 100%)",
+      "featured": false,
+      "author": "Rédaction Le Ptit Score",
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "Le jury des <strong>As d'Or 2026</strong> vient de dévoiler la liste des jeux nominés pour cette 41e édition. Cette récompense prestigieuse, décernée lors du Festival International des Jeux de Cannes, met en lumière les meilleures créations ludiques de l'année."
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "Catégorie Jeu de l'Année"
+        },
+        {
+          "type": "paragraph",
+          "text": "Cette année, trois titres se démarquent particulièrement dans la catégorie principale :"
+        },
+        {
+          "type": "list",
+          "items": [
+            "<strong>Éverdell : Nouvelles Contrées</strong> - Une extension majeure qui renouvelle l'expérience",
+            "<strong>Ark Nova</strong> - Un jeu de gestion de zoo acclamé par la critique",
+            "<strong>Living Forest</strong> - Un jeu familial innovant sur le thème de la nature"
+          ]
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "Catégorie Enfant"
+        },
+        {
+          "type": "paragraph",
+          "text": "Pour les plus jeunes joueurs, trois pépites ont été sélectionnées :"
+        },
+        {
+          "type": "list",
+          "items": [
+            "<strong>Dragomino</strong> - Spiel des Jahres 2021, enfin disponible en France",
+            "<strong>La Chasse aux Monstres</strong> - Un jeu coopératif pour les 4-8 ans",
+            "<strong>Feelings</strong> - Un jeu d'émotions et d'empathie"
+          ]
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "Catégorie Expert"
+        },
+        {
+          "type": "paragraph",
+          "text": "Pour les joueurs expérimentés :"
+        },
+        {
+          "type": "list",
+          "items": [
+            "<strong>Dune: Imperium</strong> - Le phénomène deck-building",
+            "<strong>Lost Ruins of Arnak</strong> - Exploration et gestion de deck",
+            "<strong>Flamecraft</strong> - Placement d'ouvriers avec des dragons artisans"
+          ]
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "Le palmarès"
+        },
+        {
+          "type": "paragraph",
+          "text": "Les lauréats seront révélés lors du Festival International des Jeux de Cannes qui se tiendra du 21 au 23 février 2026. Une cérémonie de remise des prix est prévue le dernier jour du festival."
+        },
+        {
+          "type": "paragraph",
+          "text": "Rendez-vous le mois prochain pour découvrir les grands gagnants de cette édition !"
+        }
+      ]
+    },
+    {
+      "id": "fij-cannes",
+      "title": "Festival International des Jeux à Cannes",
+      "icon": "🎪",
+      "badge": null,
+      "category": "Événements",
+      "date": "2026-01-19",
+      "readTime": "5 min de lecture",
+      "excerpt": "Le plus grand festival de jeux d'Europe revient du 21 au 23 février 2026.",
+      "gradient": "linear-gradient(135deg, #4facfe 0%, #00f2fe 100%)",
+      "featured": false,
+      "author": "Rédaction Le Ptit Score",
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "Le <strong>Festival International des Jeux de Cannes</strong> (FIJ) s'apprête à accueillir des milliers de passionnés du 21 au 23 février 2026. Pour sa 38e édition, l'événement promet d'être encore plus grandiose avec de nombreuses nouveautés."
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "Un événement incontournable"
+        },
+        {
+          "type": "paragraph",
+          "text": "Créé en 1987, le Festival International des Jeux est devenu LA référence européenne pour tous les amateurs de jeux de société, jeux de rôle, jeux vidéo et jeux traditionnels. Chaque année, plus de 150 000 visiteurs se pressent au Palais des Festivals et des Congrès de Cannes."
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "Les temps forts 2026"
+        },
+        {
+          "type": "paragraph",
+          "text": "Cette année, plusieurs événements majeurs sont au programme :"
+        },
+        {
+          "type": "list",
+          "items": [
+            "<strong>Cérémonie des As d'Or</strong> - Dimanche 23 février à 17h",
+            "<strong>Zone Prototypes</strong> - Testez les jeux de demain",
+            "<strong>Tournois nationaux</strong> - Compétitions officielles sur de nombreux jeux",
+            "<strong>Espace Escape Game</strong> - Plus de 20 salles éphémères",
+            "<strong>Conférences</strong> - Rencontres avec les auteurs et éditeurs"
+          ]
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "Les invités d'honneur"
+        },
+        {
+          "type": "paragraph",
+          "text": "Le festival accueillera cette année plusieurs personnalités du monde ludique :"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Reiner Knizia - Auteur légendaire de plus de 600 jeux",
+            "Jamey Stegmaier - Créateur de Scythe et Wingspan",
+            "Bruno Cathala - L'un des auteurs français les plus prolifiques"
+          ]
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "Informations pratiques"
+        },
+        {
+          "type": "paragraph",
+          "text": "<strong>Dates :</strong> Du 21 au 23 février 2026<br><strong>Lieu :</strong> Palais des Festivals - Cannes<br><strong>Horaires :</strong><br>- Vendredi : 14h-20h<br>- Samedi : 10h-20h<br>- Dimanche : 10h-18h"
+        },
+        {
+          "type": "paragraph",
+          "text": "<strong>Tarifs :</strong><br>- Pass 1 jour : 15€<br>- Pass 3 jours : 35€<br>- Gratuit pour les moins de 12 ans"
+        },
+        {
+          "type": "paragraph",
+          "text": "Les billets sont disponibles dès maintenant sur le site officiel du festival. Pour éviter la queue, privilégiez l'achat en ligne !"
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": "Comment s'y rendre ?"
+        },
+        {
+          "type": "paragraph",
+          "text": "Le Palais des Festivals est accessible en train (gare de Cannes à 10 min à pied), en voiture (plusieurs parkings à proximité) ou en avion (aéroport de Nice Côte d'Azur à 30 min)."
+        },
+        {
+          "type": "paragraph",
+          "text": "Rendez-vous à Cannes pour trois jours de jeux, de rencontres et de découvertes !"
+        }
+      ]
+    }
+  ]
+}
