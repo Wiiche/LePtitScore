@@ -1,5 +1,4 @@
-{
-  "games": [
+"games": [
     {
       "id": "uno",
       "name": "Uno",
@@ -7,18 +6,7 @@
       "players": "2-10 joueurs",
       "duration": "30 min",
       "description": "Le but est de se débarrasser de toutes ses cartes.",
-      "rules": "À tour de rôle, posez une carte de même couleur ou de même chiffre que la carte sur le dessus de la pile. Utilisez les cartes spéciales (Passer, Inverser, +2, +4, Joker) pour perturber vos adversaires !\n\nFin de partie : Le premier joueur à poser sa dernière carte gagne. N'oubliez pas de crier \"Uno !\" quand il ne vous reste qu'une carte.",
-      "scoreSystem": {
-        "type": "simple",
-        "buttons": [
-          { "label": "+1", "value": 1, "color": "#4CAF50" },
-          { "label": "+5", "value": 5, "color": "#2196F3" },
-          { "label": "+10", "value": 10, "color": "#FF9800" },
-          { "label": "+20", "value": 20, "color": "#F44336" },
-          { "label": "+50", "value": 50, "color": "#9C27B0" },
-          { "label": "-10", "value": -10, "color": "#607D8B" }
-        ]
-      }
+      "rules": "À tour de rôle, posez une carte de même couleur ou de même chiffre que la carte sur le dessus de la pile. Utilisez les cartes spéciales (Passer, Inverser, +2, +4, Joker) pour perturber vos adversaires !\n\nFin de partie : Le premier joueur à poser sa dernière carte gagne. N'oubliez pas de crier \"Uno !\" quand il ne vous reste qu'une carte."
     },
     {
       "id": "yahtzee",
@@ -27,30 +15,7 @@
       "players": "2-10 joueurs",
       "duration": "45 min",
       "description": "Lancez les dés pour réaliser des combinaisons.",
-      "rules": "Lancez 5 dés jusqu'à 3 fois par tour pour réaliser des combinaisons. Chaque combinaison ne peut être utilisée qu'une seule fois dans la partie. Les combinaisons incluent : Brelan, Carré, Full, Suite, et le Yahtzee (5 dés identiques).\n\nDécompte des points : Chiffres (1-6), Brelan (somme des dés), Full (25 pts), Suite (30-40 pts), Yahtzee (50 pts).",
-      "scoreSystem": {
-        "type": "categories",
-        "categories": [
-          { "id": "ones", "name": "As (1)", "type": "number", "max": 5 },
-          { "id": "twos", "name": "Deux (2)", "type": "number", "max": 10 },
-          { "id": "threes", "name": "Trois (3)", "type": "number", "max": 15 },
-          { "id": "fours", "name": "Quatre (4)", "type": "number", "max": 20 },
-          { "id": "fives", "name": "Cinq (5)", "type": "number", "max": 25 },
-          { "id": "sixes", "name": "Six (6)", "type": "number", "max": 30 },
-          { "id": "brelan", "name": "Brelan", "type": "number", "max": 30 },
-          { "id": "carre", "name": "Carré", "type": "number", "max": 30 },
-          { "id": "full", "name": "Full", "type": "fixed", "points": 25 },
-          { "id": "petite_suite", "name": "Petite Suite", "type": "fixed", "points": 30 },
-          { "id": "grande_suite", "name": "Grande Suite", "type": "fixed", "points": 40 },
-          { "id": "yahtzee", "name": "Yahtzee", "type": "fixed", "points": 50 },
-          { "id": "chance", "name": "Chance", "type": "number", "max": 30 }
-        ],
-        "bonus": {
-          "condition": "section_sup >= 63",
-          "points": 35,
-          "label": "Bonus section supérieure"
-        }
-      }
+      "rules": "Lancez 5 dés jusqu'à 3 fois par tour pour réaliser des combinaisons. Chaque combinaison ne peut être utilisée qu'une seule fois dans la partie. Les combinaisons incluent : Brelan, Carré, Full, Suite, et le Yahtzee (5 dés identiques).\n\nDécompte des points : Chiffres (1-6), Brelan (somme des dés), Full (25 pts), Suite (30-40 pts), Yahtzee (50 pts)."
     },
     {
       "id": "tarot",
@@ -59,42 +24,6 @@
       "players": "3-5 joueurs",
       "duration": "60 min",
       "description": "Jeu de cartes stratégique avec atouts.",
-      "rules": "Un joueur est désigné preneur et doit réaliser un contrat contre les autres joueurs (la défense). Le preneur constitue son écart (dog) avec 6 cartes face cachée. Les atouts (1-21 + Excuse) sont les cartes maîtresses.\n\nDécompte des points : Comptez les bouts (1, 21, Excuse) dans les plis pour définir le seuil. Le preneur doit atteindre 56, 51 ou 41 points selon le nombre de bouts.",
-      "scoreSystem": {
-        "type": "contract",
-        "contracts": [
-          { "id": "petite", "name": "Petite", "multiplier": 1 },
-          { "id": "garde", "name": "Garde", "multiplier": 2 },
-          { "id": "garde_sans", "name": "Garde sans", "multiplier": 4 },
-          { "id": "garde_contre", "name": "Garde contre", "multiplier": 6 }
-        ],
-        "bouts": [
-          { "count": 0, "threshold": 56 },
-          { "count": 1, "threshold": 51 },
-          { "count": 2, "threshold": 41 },
-          { "count": 3, "threshold": 36 }
-        ],
-        "bonuses": [
-          { "id": "petit_au_bout", "name": "Petit au bout", "points": 10 },
-          { "id": "poignee_simple", "name": "Poignée simple", "points": 20 },
-          { "id": "poignee_double", "name": "Poignée double", "points": 30 },
-          { "id": "poignee_triple", "name": "Poignée triple", "points": 40 },
-          { "id": "chelem_annonce", "name": "Chelem annoncé réussi", "points": 400 },
-          { "id": "chelem_non_annonce", "name": "Chelem non annoncé", "points": 200 }
-        ]
-      }
-    },
-    {
-      "id": "symbiose",
-      "name": "Symbiose",
-      "icon": "🌸",
-      "players": "2-4 joueurs",
-      "duration": "15 min",
-      "description": "Créez un écosystème harmonieux où chaque espèce compte.",
-      "rules": "Développez votre mare de 8 cartes en créant des synergies entre vos cartes et celles de vos voisins. Chaque carte montre un animal et une saison, avec un objectif de scoring.\n\nPlacement stratégique : Les 2 cartes de gauche scorent selon votre voisin de gauche, les 2 de droite selon votre voisin de droite, et les 4 du centre selon vos propres cartes.\n\nObjectifs : Comptez les animaux (libellule, escargot, grenouille, martin-pêcheur, crapaud, salamandre, poisson, triton, nénuphar) et les saisons (printemps, été, automne, hiver) pour marquer des points.",
-      "scoreSystem": {
-        "type": "symbiose"
-      }
+      "rules": "Un joueur est désigné preneur et doit réaliser un contrat contre les autres joueurs (la défense). Le preneur constitue son écart (dog) avec 6 cartes face cachée. Les atouts (1-21 + Excuse) sont les cartes maîtresses.\n\nDécompte des points : Comptez les bouts (1, 21, Excuse) dans les plis pour définir le seuil. Le preneur doit atteindre 56, 51 ou 41 points selon le nombre de bouts."
     }
-  ]
-}
+  ],
